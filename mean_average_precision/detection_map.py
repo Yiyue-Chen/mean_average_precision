@@ -156,5 +156,5 @@ class DetectionMAP:
             self.plot_pr(ax, class_name, precisions, recalls, average_precision)
             mean_average_precision.append(average_precision)
 
-        plt.suptitle("Mean average precision : {:0.2f}".format(sum(mean_average_precision)/len(mean_average_precision)))
+        plt.suptitle("Mean average precision : {:0.2f}".format(sum(mean_average_precision[1:])/len(mean_average_precision[1:])))
         fig.tight_layout()
